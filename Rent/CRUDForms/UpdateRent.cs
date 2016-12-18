@@ -24,7 +24,7 @@ namespace Rent.CRUDForms
         private RentDataSet dsRent;
         private QueriesTableAdapter daQueries;
 
-        public UpdateRent(int id)
+        public UpdateRent(int id, int contractId, int tradePointId, DateTime rentalStart, DateTime rentalEnd)
         {
             Id = id;
 
@@ -34,6 +34,10 @@ namespace Rent.CRUDForms
             InitializeComponent();
 
             label1.Text = "Id " + Id;
+            textBox2.Text = contractId.ToString();
+            textBox3.Text = tradePointId.ToString();
+            dateTimePicker1.Value = rentalStart;
+            dateTimePicker2.Value = rentalEnd;
         }
 
         private void button1_Click(object sender, EventArgs e)

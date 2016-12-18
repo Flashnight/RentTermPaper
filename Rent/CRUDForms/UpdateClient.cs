@@ -25,7 +25,7 @@ namespace Rent.CRUDForms
         private RentDataSet dsRent;
         private QueriesTableAdapter daQueries;
 
-        public UpdateClient(int id)
+        public UpdateClient(int id, string name, string adress, string phone, string requisites, string contactPerson)
         {
             Id = id;
 
@@ -35,6 +35,11 @@ namespace Rent.CRUDForms
             InitializeComponent();
 
             label1.Text = "Id " + Id;
+            textBox2.Text = name;
+            textBox3.Text = adress;
+            textBox4.Text = phone;
+            textBox5.Text = requisites;
+            textBox6.Text = contactPerson;
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace Rent.CRUDForms
         private RentDataSet dsRent;
         private QueriesTableAdapter daQueries;
 
-        public UpdatePayment(int id)
+        public UpdatePayment(int id, int sum, DateTime date, int contractId)
         {
             Id = id;
 
@@ -33,6 +33,9 @@ namespace Rent.CRUDForms
             InitializeComponent();
 
             label1.Text = "Id " + Id;
+            textBox2.Text = sum.ToString();
+            dateTimePicker1.Value = date;
+            textBox3.Text = contractId.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
